@@ -12,6 +12,8 @@
 /.env*
 /.pnp*
 /.sass-cache
+/.vscode/
+/jsconfig.json
 /connect.lock
 /coverage/
 /libpeerconnection.log

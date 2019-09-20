@@ -1,1 +1,20 @@
+<h1>replaceWith causes pushState</h1>
+<p>Reproduction instructions:</p>
+<ol>
+  <li>Open JS Console</li>
+  <li>
+    <LinkTo @route="foo">
+      <code>LinkTo foo route</code>
+    </LinkTo>
+  </li>
+  <li>
+    <button {{on "click" this.goToBar}}>
+      <code>router.replaceWith('bar')</code>
+    </button>
+  </li>
+  <li>Notice that <code>pushState: /bar</code> is logged</li>
+</ol>
 {{outlet}}
+
+<hr>
+<a href="#" onclick="javascript:(function() { window.location.href='/' })()">Reset / reload page</a>
